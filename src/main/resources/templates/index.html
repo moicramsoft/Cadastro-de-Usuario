@@ -45,25 +45,25 @@
 
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog modal-sm">
+    <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Cadastraer Usuário</h4>
+          <h4 class="modal-title">Cadastrar Usuário</h4>
         </div>
         <div class="modal-body">
-          <form action="#" th:action="@{/adduser}" th:object="${user}" method="post">
-    <label for="name">Name</label>
-    <input type="text" th:field="*{name}" id="name" placeholder="Name">
-    <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+          <form action="#" th:action="@{/adduser}" th:object="${user}" method="post" >
+    <label for="name">Nome</label>
+    <input type="text" th:field="*{name}" id="name" placeholder="Nome" class="form-control" aria-label="Small" >
+    <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span><br>
     <label for="email">Email</label>
-    <input type="text" th:field="*{email}" id="email" placeholder="Email">
-    <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
-    <input type="submit" value="Add User">
+    <input type="text" th:field="*{email}" id="email" placeholder="Email" class="form-control"  aria-label="Small" >
+    <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span><br>
+    <input type="submit" value="Cadastra Usuário" class="btn btn-info btn-lg">
 </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
         </div>
       </div>
     </div>

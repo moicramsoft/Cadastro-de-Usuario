@@ -26,10 +26,10 @@ public class User  implements Serializable{
 	@Column(name = "id", unique = true, nullable = false)
 	private long id;
 
-    @NotBlank(message = "Name is mandatory")
+    @NotBlank(message = "* Nome é Obrigatório")
     private String name;
 
-    @NotBlank(message = "Email is mandatory")
+    @NotBlank(message = "* E-mail é Obrigatório")
     private String email;
 
 	public long getId() {
