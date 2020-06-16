@@ -27,7 +27,7 @@ public class UserController {
     @PostMapping("/adduser")
     public String addUser(@Valid User user, BindingResult result, Model model) {
     	if (result.hasErrors()) {
-    		//fiz assim para evitar com que o cache grave o mesms dados se o usuario pressionar F5
+    		//fiz assim para evitar com que o cache grave o mesmos dados se o usuario pressionar F5
             return "redirect:/";
         } 
         userRepository.save(user);
@@ -54,7 +54,7 @@ public class UserController {
 
         userRepository.save(user);
         model.addAttribute("users", userRepository.findAll());
-        return "index";
+        return "redirect:/";
     }
 
     @GetMapping("/delete/{id}")

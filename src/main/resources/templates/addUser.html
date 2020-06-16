@@ -26,6 +26,22 @@
 								th:field="*{email}" id="email" placeholder="Email"
 								class="form-control" aria-label="Small"> <span
 								th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span><br>
+								
+								
+								<label for="telefone">Telefone</label> <input type="text"
+								th:field="*{telefone}" id="telefone" placeholder="telefone"
+								class="form-control" aria-label="Small"> <span
+								th:if="${#fields.hasErrors('telefone')}" th:errors="*{telefone}"></span><br>
+								
+								
+								
+								<label for="celular">Telefone</label> <input type="text"
+								th:field="*{celular}" id="celular" placeholder="celular"
+								class="form-control" aria-label="Small"> <span
+								th:if="${#fields.hasErrors('celular')}" th:errors="*{celular}"></span><br>
+								
+								
+								
 							<input type="submit" value="Cadastra Usuário"
 								class="btn btn-info btn-lg">
 						</form>
