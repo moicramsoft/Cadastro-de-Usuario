@@ -40,7 +40,7 @@ $(document).ready(function(){
 				</thead>
 				<tbody>
 					<tr th:each="user : ${users}">
-						<td th:text="${user.name}"></td>
+						<td th:text="${user.nome}"></td>
 						<td th:text="${user.email}"></td>
 						<td th:text="${user.telefone}"></td>
 						<td th:text="${user.celular}"></td>
@@ -76,25 +76,26 @@ $(document).ready(function(){
 					<div class="modal-body">
 						<form action="#" th:action="@{/adduser}" th:object="${user}"
 							method="post">
-							<label for="name">Nome : </label> <input type="text"
-								th:field="*{name}" id="name" placeholder="Nome"
+							<label for="nome">Nome : </label> <input type="text"
+								th:field="*{nome}" id="nome" placeholder="Nome"
 								class="form-control" aria-label="Small" onfocus="this.value=''"> <span
-								th:if="${#fields.hasErrors('name')}" th:errors="*{name}"  class="glyphicon glyphicon-envelope"></span><br>
+								th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"  ></span><br>
 							<label for="email">Email : </label> <input type="text"
 								th:field="*{email}" id="email" placeholder="Email"
 								class="form-control" aria-label="Small" onfocus="this.value=''" > <span
-								th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span><br>
+								th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="glyphicon glyphicon-envelope"></span><br>
 								
 								
 								<label for="telefone">Telefone : </label> <input type="text" 
 								th:field="*{telefone}" id="telefone" name="telefone" placeholder="telefone"
 								class="form-control" aria-label="Small" onfocus="this.value=''" > <span
-								th:if="${#fields.hasErrors('telefone')}" th:errors="*{telefone}"></span><br>
+								th:if="${#fields.hasErrors('telefone')}" th:errors="*{telefone}"  class="glyphicon-phone-alt
+"></span><br>
 								
 								<label for="celular">Celular : </label> <input type="text" 
 								th:field="*{celular}" id="celular" name="celular" placeholder="celular"
 								class="form-control" aria-label="Small" onfocus="this.value=''" > <span
-								th:if="${#fields.hasErrors('celular')}" th:errors="*{celular}"></span><br>
+								th:if="${#fields.hasErrors('celular')}" th:errors="*{celular}"  class="glyphicon-phone"></span><br>
 								
 							<button type="submit" class="btn btn-info btn-lg" title="Salvar"><i class="fa fa-save fa-lg"></i>
 							</button>
@@ -125,7 +126,7 @@ $(document).ready(function(){
 				</div>
 			</div>
 		</div>
-	</div>
+	
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
  <!--/.footer-->
     
@@ -134,11 +135,11 @@ $(document).ready(function(){
                
             <div class="pull-right">
 <ul class="nav nav-pills nav-fill">
-                	<li> <a href="#"> <i class=" fa fa-facebook fa-2x">   </i> </a> </li>
-                    <li> <a href="#"> <i class="fa fa-twitter fa-2x">   </i> </a> </li>
-                        <li> <a href="#"> <i class="fa fa-linkedin fa-2x">   </i> </a> </li>
-                        <li> <a href="#"> <i class="fa fa-youtube fa-2x">   </i> </a> </li>
-                         <li> <a href="#"> <i class="fa fa-instagram fa-2x">   </i> </a> </li>
+                	<li> <a href="https://www.facebook.com/moicramsilva"> <i class=" fa fa-facebook fa-2x">   </i> </a> </li>
+                    <li> <a href="https://twitter.com/marcio151"> <i class="fa fa-twitter fa-2x">   </i> </a> </li>
+                        <li> <a href="https://www.linkedin.com/in/marcio-silva-de-oliveira-69bb832b/"> <i class="fa fa-linkedin fa-2x">   </i> </a> </li>
+                        <li> <a href="https://www.youtube.com/channel/UCRvFrX2LcSjet4jwExFO9vA?view_as=subscriber"> <i class="fa fa-youtube fa-2x">   </i> </a> </li>
+                         <li> <a href="https://www.instagram.com/moicramsilva/"> <i class="fa fa-instagram fa-2x">   </i> </a> </li>
                 </ul> 
             </div>
         </div>

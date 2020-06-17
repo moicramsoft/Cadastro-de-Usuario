@@ -1,4 +1,4 @@
-package com.moicramsoft;
+package com.moicramsoft.controller;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.moicramsoft.entity.*;
+import com.moicramsoft.repository.*;
+
+
 @Controller
 @RequestMapping
 public class UserController {
 	@Autowired
 	private UserRepository userRepository;
-    @GetMapping("/signup")
-    public String showSignUpForm(User user) {
-        return "addUser";
-    }
     @RequestMapping("/")
 	public String UserListar(@Valid User user,BindingResult result,Model ModelAndView) {
 		ModelAndView.addAttribute("users", userRepository.findAll());
@@ -36,7 +36,7 @@ public class UserController {
     }
 
     @GetMapping("/edit/{id}")
-    public String showUpdateForm(@PathVariable("id") long id, Model model) {
+    public String editUser(@PathVariable("id") long id, Model model) {
         User user = userRepository.findById(id)
           .orElseThrow(() -> new IllegalArgumentException("Usuário Invalido:" + id));
 
