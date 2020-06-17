@@ -6,4 +6,4 @@
 	editUser<br />
 	updateUser<br />
 	deleteUser<br />
-	<img src="https://github.com/moicramsoft/Cadastro-de-Usuario/blob/master/src/main/resources/static/img/1.png" alt="Tela principal" width="300" height="300">
+	<img src="https://github.com/moicramsoft/Cadastro-de-Usuario/blob/master/src/main/resources/static/img/1.png" alt="Tela principal" width="600" height="600">
